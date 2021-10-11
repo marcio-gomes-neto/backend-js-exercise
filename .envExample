@@ -1,0 +1,2 @@
+CONNECTIONSTRING = mongodb connection string
+SESSIONSTRING = random session string

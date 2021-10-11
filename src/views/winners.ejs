@@ -1,0 +1,84 @@
+<%- include('include/header') %> 
+<%- include('include/nav') %>    
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2">
+
+        </div>
+
+        <div class="col-lg-8 my-3">
+            
+            <h1 class="text-center"> Ranking top 10: </h1>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Points</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td><%=element[0].name%></td>
+                    <td><%=element[0].points%></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td><%=element[1].name%></td>
+                    <td><%=element[1].points%></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td><%=element[2].name%></td>
+                    <td><%=element[2].points%></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td><%=element[3].name%></td>
+                    <td><%=element[3].points%></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td><%=element[4].name%></td>
+                    <td><%=element[4].points%></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td><%=element[5].name%></td>
+                    <td><%=element[5].points%></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td><%=element[6].name%></td>
+                    <td><%=element[6].points%></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td><%=element[7].name%></td>
+                    <td><%=element[7].points%></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td><%=element[8].name%></td>
+                    <td><%=element[8].points%></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td><%=element[9].name%></td>
+                    <td><%=element[9].points%></td>
+                  </tr>
+                </tbody>
+              </table>
+
+        </div>
+
+        <div class="col-lg-2">
+            
+        </div>
+    </div>
+</div>
+
+
+<%- include('include/footer') %>

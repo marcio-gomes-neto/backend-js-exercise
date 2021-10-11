@@ -1,0 +1,42 @@
+<%- include('include/header') %> 
+<%- include('include/nav') %>    
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2">
+
+        </div>
+
+        <div class="col-lg-8 my-3 text-center">
+            
+            <h1 class="text-center"> Login ou Cadastro</h1>
+            <% if(user){ %>
+                <p class="text-center lead">Você está conectado como <%= user.email%></p>
+                <p class="text-center lead">Compartilhe seu link de registro para ganhar pontos.<br>Assim que seu amigo registrar, um ponto será registrado na sua conta!</p>
+                <p class="text-center lead">
+                   http://localhost:3000/register/index?id=<%= user._id%>
+                </p>
+                <p class="text-center lead">Número de pontos: <%= user.points%></p>
+                
+                <%- include('include/messages')%>
+            <% }else{ %> 
+                <p class="text-center lead">Cadastre-se já ou faça seu login</p>
+                
+                <%- include('include/messages')%>
+
+            <% } %> 
+
+                <a href="/winners" class="col-lg-8 my-3 btn btn-dark">Show me the winners!</a>
+
+            
+        </div>
+
+        
+        <div class="col-lg-2">
+            
+        </div>
+    </div>
+</div>
+
+
+<%- include('include/footer') %>

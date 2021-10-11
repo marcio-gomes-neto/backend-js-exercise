@@ -1,0 +1,83 @@
+<%- include('include/header') %> 
+<%- include('include/nav') %>    
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2">
+
+        </div>
+
+        <div class="col-lg-8 my-3">
+            
+            <h1 class="text-center"> Informações do Usuário</h1>
+                <%- include('include/messages')%>
+            
+            <% if(user){ %> 
+                <p class="text-center lead"> <%=  %>  </p>
+                
+                <table class="table text-center lead">
+                    <tbody>
+                      
+                      <tr>
+                        <th scope="row">Email:</th>
+                        <% if(user.email){ %> 
+                            <td><%=user.email%></td>
+                        <% }else{ %>
+                            <td>Não Inserido!</td>
+                        <% } %>  
+                      </tr>
+                      
+                      <tr>
+                        <th scope="row">Nome:</th>
+                        <% if(usuario.name){ %> 
+                            <td><%=usuario.name%></td>
+                        <% }else{ %>
+                            <td>Não Inserido!</td>
+                        <% } %>  
+                      </tr>
+                    
+                      <tr>
+                        <th scope="row">Telefone:</th>
+                        <% if(usuario.phone){ %> 
+                            <td><%=usuario.phone%></td>
+                        <% }else{ %>
+                            <td>Não Inserido!</td>
+                        <% } %> 
+                      </tr>
+                    
+                      <tr>
+                        <th scope="row">Número de pontos:</th>
+                        <% if(usuario.points){ %> 
+                            <td><%=usuario.points%></td>
+                        <% }else{ %>
+                            <td>Não Inserido!</td>
+                        <% } %> 
+                      </tr>
+                      
+                        <th scope="row">Data de criação da conta:</th>
+                        <td> <%= user.data_conta%></td>
+                      </tr>
+    
+                    </tbody>
+                  </table>
+                
+                <p class="text-center">
+                    <a class="btn btn-success " href="/info/edit" role="button">Editar Conta</a>
+                    <a class="btn btn-danger" href="/info/delete" role="button">Apagar Conta</a>
+              
+                </p>
+                
+                <% }else{ %>
+                <p class="text-center lead">Você precisa estar conectado para ver as informações do usuário</p>
+            <% } %>
+            
+            
+
+        </div>
+
+        <div class="col-lg-2"></div>
+    </div>
+</div>
+
+
+<%- include('include/footer') %>
